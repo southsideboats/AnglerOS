@@ -73,7 +73,7 @@ EOF
   ls -l ./work/$thisArch/$imageName
 
   # Renaming the OS and moving it to the release folder.
-  cp -v ./work/$thisArch/$imageName ./release/$thisArch/lysmarine-bbn_${LYSMARINE_VER}-${thisArch}-${cpuArch}.img
+  cp -v ./work/$thisArch/$imageName ./release/$thisArch/bbn-mini_${LYSMARINE_VER}-${thisArch}-${cpuArch}.img
 
   exit 0
 }
