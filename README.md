@@ -1,5 +1,5 @@
 
-## What is LysMarine BBN Edition
+## What is BBN-Mini Edition
 
 This is the fork of the original LysMarine https://github.com/lysmarine/lysmarine_gen by Frederic Guilbault.
 It is based on the LysMarine OS, but differs from it in a number of included applications, and the UI features.
