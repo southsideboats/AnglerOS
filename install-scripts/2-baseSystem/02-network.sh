@@ -10,7 +10,7 @@ cat $FILE_FOLDER/hosts >> /etc/hosts
 sed -i '/raspberrypi/d' /etc/hosts
 
 # Access Point management
-install -m0600 -v $FILE_FOLDER/lysmarine-hotspot.nmconnection "/etc/NetworkManager/system-connections/"
+install -m0600 -v $FILE_FOLDER/bbn-hotspot.nmconnection "/etc/NetworkManager/system-connections/"
 systemctl disable dnsmasq
 
 

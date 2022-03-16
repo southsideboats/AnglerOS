@@ -38,8 +38,6 @@ pushd /home/signalk/.signalk
   su signalk -c "npm install @signalk/charts-plugin  \
                  sk-resources-fs  \
                  freeboard-sk-helper  \
-                 skwiz  \
-                 tuktuk-chart-plotter  \
                  signalk-raspberry-pi-bme280  \
                  signalk-raspberry-pi-bmp180  \
                  signalk-raspberry-pi-ina219  \
@@ -55,21 +53,16 @@ pushd /home/signalk/.signalk
                  signalk-simple-notifications  \
                  signalk-wilhelmsk-plugin  \
                  signalk-to-nmea2000  \
-                 @signalk/sailgauge  \
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
                  signalk-sonoff-ewelink  \
                  signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
                  signalk-fusion-stereo  \
-                 signalk-barometer-trend  \
                  @oehoe83/signalk-raspberry-pi-bme680  \
                  signalk-threshold-notifier  \
-                 signalk-barograph \
-                 signalk-polar \
                  signalk-scheduler \
                  signalk-sbd signalk-sbd-msg \
-                 openweather-signalk \
                  signalk-noaa-weather \
                  xdr-parser-plugin \
                  signalk-to-influxdb \
@@ -95,13 +88,11 @@ pushd /home/signalk/.signalk
                  @codekilo/nmea0183-iec61121-450-server \
                  signalk-generic-pgn-parser \
                  signalk-maretron-proprietary \
-                 signalk-vessels-to-ais \
                  @codekilo/signalk-notify \
                  @codekilo/signalk-trigger-event \
                  @codekilo/signalk-twilio-notifications \
                  @meri-imperiumi/signalk-audio-notifications \
                  signalk-buddylist-plugin \
-                 signalk-navtex-plugin \
                  signalk-saillogger --unsafe-perm --loglevel error"
 popd
 

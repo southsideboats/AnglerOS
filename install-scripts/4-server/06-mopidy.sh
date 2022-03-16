@@ -44,4 +44,4 @@ echo 'user ALL=(ALL) NOPASSWD: /usr/local/sbin/mopidy-restart' >>/etc/sudoers
 rm -rf ~/.cache/pip
 
 # Enable mopidy service
-systemctl enable mopidy
+systemctl disable mopidy

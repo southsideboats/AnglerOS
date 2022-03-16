@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
-apt-get -q -y install boats libts-bin
-
+#apt-get -q -y install boats libts-bin
+#
