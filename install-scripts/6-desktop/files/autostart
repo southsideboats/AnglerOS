@@ -23,6 +23,8 @@ evdev-rce &
 #(sleep 4 && /opt/bbn-launcher/bbn-launcher) &
 
 (sleep 7 && nm-applet) &
-(sleep 8 && onboard) &
-(sleep 60 && sh -c 'while ! ping -c 1 -n -w 1 spotify.com; do sleep 20; done;' && \
-  systemctl --user reenable raspotify && systemctl --user start raspotify) &
+(sleep 8 && onboard)
+
+#(sleep 60 && sh -c 'while ! ping -c 1 -n -w 1 spotify.com; do sleep 20; done;' && \
+#  systemctl --user reenable raspotify && systemctl --user start raspotify) &
+
