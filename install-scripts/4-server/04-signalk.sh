@@ -53,10 +53,8 @@ pushd /home/signalk/.signalk
                  signalk-simple-notifications  \
                  signalk-wilhelmsk-plugin  \
                  signalk-to-nmea2000  \
-                 @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
                  signalk-sonoff-ewelink  \
-                 signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
                  signalk-fusion-stereo  \
                  @oehoe83/signalk-raspberry-pi-bme680  \
@@ -65,7 +63,6 @@ pushd /home/signalk/.signalk
                  signalk-sbd signalk-sbd-msg \
                  signalk-noaa-weather \
                  xdr-parser-plugin \
-                 signalk-to-influxdb \
                  nmea0183-to-nmea0183 \
                  signalk-path-filter \
                  signalk-empirbusnxt-plugin \
