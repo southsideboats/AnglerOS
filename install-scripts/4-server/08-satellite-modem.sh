@@ -12,3 +12,5 @@ install -v -m 0644 $FILE_FOLDER/wvdial-iridium.conf "/etc/"
 # See https://github.com/tdolby/python-iridium-modem/
 pip3 install python-iridium-modem
 
+systemctl disable pppstatus
+
