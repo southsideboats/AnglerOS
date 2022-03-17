@@ -56,7 +56,6 @@ pushd /home/signalk/.signalk
                  @signalk/signalk-node-red  \
                  signalk-sonoff-ewelink  \
                  @mxtommy/kip  \
-                 signalk-fusion-stereo  \
                  @oehoe83/signalk-raspberry-pi-bme680  \
                  signalk-threshold-notifier  \
                  signalk-scheduler \
@@ -65,7 +64,6 @@ pushd /home/signalk/.signalk
                  xdr-parser-plugin \
                  nmea0183-to-nmea0183 \
                  signalk-path-filter \
-                 signalk-empirbusnxt-plugin \
                  signalk-n2k-switch-alias \
                  signalk-n2k-switching \
                  signalk-n2k-switching-emulator \
@@ -73,12 +71,8 @@ pushd /home/signalk/.signalk
                  signalk-n2k-virtual-switch \
                  signalk-switch-automation \
                  signalk-shelly \
-                 @signalk/calibration \
-                 @signalk/tracks-plugin \
                  signalk-datetime \
-                 signalk-net-relay \
                  signalk-path-mapper \
-                 signalk-healthcheck \
                  @signalk/vedirect-serial-usb \
                  @signalk/udp-nmea-plugin \
                  signalk-n2kais-to-nmea0183 \
@@ -87,9 +81,6 @@ pushd /home/signalk/.signalk
                  signalk-maretron-proprietary \
                  @codekilo/signalk-notify \
                  @codekilo/signalk-trigger-event \
-                 @codekilo/signalk-twilio-notifications \
-                 @meri-imperiumi/signalk-audio-notifications \
-                 signalk-buddylist-plugin \
                  signalk-saillogger --unsafe-perm --loglevel error"
 popd
 
