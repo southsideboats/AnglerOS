@@ -46,7 +46,6 @@ pushd /home/signalk/.signalk
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
-                 @codekilo/signalk-modbus-client  \
                  signalk-derived-data  \
                  signalk-anchoralarm-plugin  \
                  signalk-alarm-silencer  \
@@ -58,8 +57,6 @@ pushd /home/signalk/.signalk
                  @mxtommy/kip  \
                  @oehoe83/signalk-raspberry-pi-bme680  \
                  signalk-threshold-notifier  \
-                 signalk-scheduler \
-                 signalk-sbd signalk-sbd-msg \
                  signalk-noaa-weather \
                  xdr-parser-plugin \
                  nmea0183-to-nmea0183 \
@@ -71,16 +68,8 @@ pushd /home/signalk/.signalk
                  signalk-n2k-virtual-switch \
                  signalk-switch-automation \
                  signalk-shelly \
-                 signalk-datetime \
-                 signalk-path-mapper \
-                 @signalk/vedirect-serial-usb \
-                 @signalk/udp-nmea-plugin \
-                 signalk-n2kais-to-nmea0183 \
-                 @codekilo/nmea0183-iec61121-450-server \
                  signalk-generic-pgn-parser \
-                 signalk-maretron-proprietary \
                  @codekilo/signalk-notify \
-                 @codekilo/signalk-trigger-event \
                  signalk-saillogger --unsafe-perm --loglevel error"
 popd
 
