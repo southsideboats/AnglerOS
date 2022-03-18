@@ -70,9 +70,9 @@ apt-get clean
 
 ## Install base desktop apps.
 if [ $LMOS == Raspbian ]; then
-	apt-get install -y -q chromium-browser
+	apt-get install -y -q chromium-browser midori
 else
-	apt-get install -y -q chromium
+	apt-get install -y -q chromium midori
 fi
 
 # Adobe Flash Player. Copyright 1996-2015. Adobe Systems Incorporated. All Rights Reserved.
