@@ -40,7 +40,6 @@ pushd /home/signalk/.signalk
                  freeboard-sk-helper  \
                  skwiz  \
                  tuktuk-chart-plotter  \
-                 signalk-raspberry-mcs  \
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
