@@ -5,14 +5,9 @@
   MY_CPU_ARCH=$1
   LYSMARINE_VER=$2
 
-  thisArch="raspios"
-  cpuArch="armhf"
-  zipName="raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2022-01-28/2022-01-28-raspios-buster-armhf-lite.zip"
-  if [ "arm64" == "$MY_CPU_ARCH" ]; then
-    cpuArch="arm64"
-    zipName="raspios_lite_arm64/images/raspios_lite_arm64-2021-05-28/2021-05-07-raspios-buster-arm64-lite.zip"
-  fi
-  imageSource="https://downloads.raspberrypi.org/${zipName}"
+  thisArch="debian"
+  zipName="cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0-live+nonfree/amd64/iso-hybrid/debian-live-10.12.0-amd64-standard+nonfree.iso"
+  imageSource="https://cdimage.debian.org/${zipName}"
 
   checkRoot
 
@@ -23,13 +18,11 @@
   log "Downloading official image from internet."
   myCache=./cache/$thisArch
   wget -P $myCache/ $imageSource
-  7z e -aoa -o$myCache/ $myCache/$(basename $zipName)
-  rm $myCache/$(basename $zipName)
 
   # Copy image file to work folder add temporary space to it.
   imageName=$(
     cd $myCache
-    ls *.img
+    ls *.iso
     cd ../../
   )
   inflateImage $thisArch $myCache/$imageName

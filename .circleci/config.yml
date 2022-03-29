@@ -54,9 +54,19 @@ jobs:
       - EMU=on
     steps:
       - do-all
+  build-debian-buster-amd64:
+    executor: boot-linux
+    environment:
+      - DOCKER_IMAGE=amd64/debian:buster
+      - CONTAINER_DISTRO=debian:buster
+      - PKG_RELEASE=debian
+      - PKG_DISTRO=buster
+      - PKG_ARCH=amd64
+      - EMU=off
+    steps:
+      - do-all
 workflows:
   version: 2
   build_all:
     jobs:
-      - build-raspbian-buster-arm32
-      - build-raspbian-buster-arm64
+      - build-debian-buster-amd64
