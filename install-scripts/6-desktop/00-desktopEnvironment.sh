@@ -5,14 +5,6 @@ install  -v $FILE_FOLDER/Xwrapper.config "/etc/X11/"
 
 arch=$(dpkg --print-architecture)
 
-if [ $LMOS == Raspbian ]; then
-  apt-get -q -y install xserver-xorg-video-fbturbo
-fi
-
-if [ $LMOS == Armbian ]; then
-	apt-get -q -y install xserver-xorg-legacy
-fi
-
 # Install touchscreen drivers, etc
 apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-calibrator gldriver-test \
  budgie-desktop budgie-weathershow-applet budgie-rotation-lock-applet \

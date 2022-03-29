@@ -26,15 +26,6 @@ else
   pip3 install pywavefront pyglet gps gevent-websocket importlib_metadata "python-socketio<5"
 fi
 
-if [ $LMOS == 'Raspbian' ] && [ $LMARCH == 'armhf' ]; then
-  wget https://project-downloads.drogon.net/wiringpi-latest.deb
-  dpkg -i wiringpi-latest.deb && rm wiringpi-latest.deb
-fi
-
-#if [ $LMARCH == 'arm64' ]; then
-#  wget https://github.com/guation/WiringPi-arm64/releases/download/2.61-g/wiringpi-2.61-g.deb
-#  dpkg -i wiringpi-2.61-g.deb && rm wiringpi-2.61-g.deb
-#fi
 
 pushd ./stageCache
   # Install RTIMULib2 as it's a dependency of pypilot

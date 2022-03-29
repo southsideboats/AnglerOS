@@ -7,7 +7,7 @@ apt-get install -y -q network-manager make avahi-daemon createap bridge-utils wa
 # Resolve lysmarine.local
 install -v $FILE_FOLDER/hostname "/etc/"
 cat $FILE_FOLDER/hosts >> /etc/hosts
-sed -i '/raspberrypi/d' /etc/hosts
+sed -i '/debian/d' /etc/hosts
 
 # Access Point management
 install -m0600 -v $FILE_FOLDER/lysmarine-hotspot.nmconnection "/etc/NetworkManager/system-connections/"
