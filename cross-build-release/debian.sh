@@ -5,6 +5,7 @@
   MY_CPU_ARCH=$1
   LYSMARINE_VER=$2
 
+  cpuArch=${MY_CPU_ARCH}
   thisArch="debian"
   zipName="cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0-live+nonfree/amd64/iso-hybrid/debian-live-10.12.0-amd64-standard+nonfree.iso"
   imageSource="https://cdimage.debian.org/${zipName}"
