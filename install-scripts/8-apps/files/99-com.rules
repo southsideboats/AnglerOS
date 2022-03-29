@@ -2,7 +2,6 @@ SUBSYSTEM=="input", GROUP="input", MODE="0660"
 SUBSYSTEM=="i2c-dev", GROUP="i2c", MODE="0660"
 SUBSYSTEM=="spidev", GROUP="spi", MODE="0660"
 SUBSYSTEM=="bcm2835-gpiomem", GROUP="gpio", MODE="0660"
-SUBSYSTEM=="rpivid-*", GROUP="video", MODE="0660"
 
 KERNEL=="vcsm-cma", GROUP="video", MODE="0660"
 SUBSYSTEM=="dma_heap", GROUP="video", MODE="0660"
@@ -54,8 +53,4 @@ KERNEL=="ttyS0", PROGRAM="/bin/sh -c '\
 	fi \
 '", SYMLINK+="serial%c"
 
-ACTION=="add", SUBSYSTEM=="vtconsole", KERNEL=="vtcon1", RUN+="/bin/sh -c '\
-	if echo RPi-Sense FB | cmp -s /sys/class/graphics/fb0/name; then \
-		echo 0 > /sys$devpath/bind; \
-	fi; \
-'"
+

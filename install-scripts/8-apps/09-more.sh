@@ -7,7 +7,7 @@ apt-get -q -y install i2c-tools python3-smbus dos2unix traceroute telnet whois s
   dconf-editor gedit gnome-calculator gnome-weather gnome-chess openpref \
   python3-bme680 python3-gpiozero python3-w1thermsensor  \
   sysstat jq xmlstarlet uhubctl iotop rsync timeshift at snapd \
-  rpi-imager piclone fontconfig nautic gnome-disk-utility catfish xfce4-screenshooter hardinfo baobab # foxtrotgps
+  fontconfig nautic gnome-disk-utility catfish xfce4-screenshooter hardinfo baobab # foxtrotgps
 
 systemctl disable openvpn
 
@@ -19,16 +19,6 @@ systemctl disable snapd snapd.socket
 
 # Budgie settings
 gsettings set com.solus-project.budgie-wm focus-mode true
-
-# rpi-clone
-git clone https://github.com/bareboat-necessities/rpi-clone.git
-cd rpi-clone
-cp rpi-clone rpi-clone-setup /usr/local/sbin
-cd ..
-chmod +x /usr/local/sbin/rpi-clone*
-rm -rf rpi-clone
-
-install -v $FILE_FOLDER/piclone.desktop -o 1000 -g 1000 "/home/user/.local/share/applications/piclone.desktop"
 
 apt-get clean
 npm cache clean --force
@@ -42,7 +32,6 @@ install -v -m 0755 $FILE_FOLDER/bbn-rename-host.sh "/usr/local/sbin/bbn-rename-h
 
 install -d -o 1000 -g 1000 -m 0755 "/home/user/add-ons"
 install -v -o 1000 -g 1000 -m 0644 $FILE_FOLDER/add-ons/readme.txt "/home/user/add-ons/"
-install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/deskpi-pro-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/text-to-speech-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/text-to-speech-sample.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/wxtoimg-install.sh "/home/user/add-ons/"
@@ -54,12 +43,10 @@ install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/predict-install.sh "/hom
 #install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/nodered-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/timezone-setup.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/calibrate-touchscreen.sh "/home/user/add-ons/"
-install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/os-settings.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/change-password.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/scytalec-inmarsat-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/winlink-pat-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/openplotter-install.sh "/home/user/add-ons/"
-install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/argonOne-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/navionics-demo-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/widevine-lib-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/wifi-drivers-install.sh "/home/user/add-ons/"
@@ -77,7 +64,6 @@ install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/maritime-lib-install.sh 
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/homeassistant-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/jellyfin-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/stdc-install.sh "/home/user/add-ons/"
-install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/sailorhat-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/maiana-ais-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 $FILE_FOLDER/add-ons/tripwire-install.sh "/home/user/add-ons/"
 
@@ -132,6 +118,6 @@ mkdir -p /home/user/usbboot && cd /home/user/usbboot
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 make
-cp rpiboot /usr/local/sbin/
+
 rm -rf /home/user/usbboot
 cd "$CUR_DIR"

@@ -97,9 +97,7 @@ if [[ -d /etc/polkit-1 ]]; then
 	install -v $FILE_FOLDER/org.freedesktop.NetworkManager.pkla  "/etc/polkit-1/localauthority/10-vendor.d/"
 fi
 
-if [[ -f /etc/sudoers.d/010_pi-nopasswd ]]; then # Remove no-pwd sudo to user pi.
-	rm /etc/sudoers.d/010_pi-nopasswd
-fi
+
 
 echo 'PATH="/sbin:/usr/sbin:$PATH"' >> /home/user/.profile # Give user capability to halt and reboot.
 

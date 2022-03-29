@@ -40,10 +40,6 @@ pushd /home/signalk/.signalk
                  freeboard-sk-helper  \
                  skwiz  \
                  tuktuk-chart-plotter  \
-                 signalk-raspberry-pi-bme280  \
-                 signalk-raspberry-pi-bmp180  \
-                 signalk-raspberry-pi-ina219  \
-                 signalk-raspberry-pi-1wire  \
                  signalk-raspberry-mcs  \
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
@@ -59,11 +55,9 @@ pushd /home/signalk/.signalk
                  @signalk/signalk-autopilot  \
                  @signalk/signalk-node-red  \
                  signalk-sonoff-ewelink  \
-                 signalk-raspberry-pi-monitoring  \
                  @mxtommy/kip  \
                  signalk-fusion-stereo  \
                  signalk-barometer-trend  \
-                 @oehoe83/signalk-raspberry-pi-bme680  \
                  signalk-threshold-notifier  \
                  signalk-barograph \
                  signalk-polar \
@@ -104,10 +98,6 @@ pushd /home/signalk/.signalk
                  signalk-navtex-plugin \
                  signalk-saillogger --unsafe-perm --loglevel error"
 popd
-
-sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js
-sed -i "s#/opt/vc/bin/##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js
-sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk-server -name tokensecurity.js)" || true
 
 ## Give set-system-time the possibility to change the date.
 echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
