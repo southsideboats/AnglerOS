@@ -19,7 +19,7 @@ for pkg_file in cross-build-release/release/*/*.$EXT; do
   cd $zipDir || exit 255
   xz -z -c -v -5 --threads=4 ${zipName} > ../../../tmp/${zipName}.xz
   cd ../../..
-  cloudsmith push raw $REPO ./tmp/${zipName}.xz --summary "Angler OS built on $(date)" --description "Angler OS build"
+  cloudsmith push raw $REPO ./tmp/${zipName}.xz --summary "Angler OS built by CircleCi on $(date)" --description "Angler OS build"
   RESULT=$?
   if [ $RESULT -eq 144 ]; then
     echo "skipping already deployed $pkg_file"
